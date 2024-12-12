@@ -1,0 +1,17 @@
+<div class="flex flex-col items-center justify-center h-full p-4">
+    <button
+        class="px-6 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600"
+        (click)="loadPdf()"
+    >
+        Charger un fichier PDF
+    </button>
+
+    <div *ngIf="pdfData" class="mt-6 w-full max-w-4xl">
+        <h2 class="text-lg font-semibold mb-2">Contenu du fichier PDF (Base64) :</h2>
+        <textarea
+            class="w-full h-64 p-4 border rounded"
+            [value]="pdfData"
+            readonly
+        ></textarea>
+    </div>
+</div>
